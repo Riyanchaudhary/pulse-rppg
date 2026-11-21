@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: pulse-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: starter
+    healthCheckPath: /api/health
+    disk:
+      name: pulse-data
+      mountPath: /var/lib/pulse/data
+      sizeGB: 10
+    envVars:
+      - key: PULSE_CORS_ORIGINS
+        sync: false
+      - key: PULSE_MAX_UPLOAD_MB
+        value: "500"

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+backend/data/
+*.sqlite3
+
+# Node / Vite
+node_modules/
+frontend/dist/
+.vite/
+.env
+.env.*
+!.env.example
+.vercel/
+
+# Editor and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
